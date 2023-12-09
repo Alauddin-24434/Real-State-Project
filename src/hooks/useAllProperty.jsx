@@ -4,7 +4,7 @@ const useAllProperty = () => {
   const { data, isFetching, error } = useQuery({
     queryKey: ['properties'],
     queryFn: async () => {
-      const responseData = await fetch('http://localhost:5000/houses');
+      const responseData = await fetch('https://real-state-server-side.vercel.app/houses');
       const result = await responseData.json();
 
       // Add a condition based on the 'status' field

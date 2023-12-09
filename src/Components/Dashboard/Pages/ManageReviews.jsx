@@ -11,7 +11,7 @@ const {data:reviews,refetch}=useAllReviews()
 //     // Fetch reviews data from your API
 //     const fetchReviews = async () => {
 //       try {
-//         const response = await axios.get('http://localhost:5000/reviews');
+//         const response = await axios.get('https://real-state-server-side.vercel.app/reviews');
 //         setReviews(response.data);
 //       } catch (error) {
 //         console.error('Error fetching reviews:', error.message);
@@ -24,7 +24,7 @@ const {data:reviews,refetch}=useAllReviews()
   const handleDeleteReview = async (reviewId) => {
     try {
       // Make an API call to delete the review
-      await axios.delete(`http://localhost:5000/userReviews/${reviewId}`);
+      await axios.delete(`https://real-state-server-side.vercel.app/userReviews/${reviewId}`);
       // Update the local state after successful deletion
       refetch()
       // Show success message

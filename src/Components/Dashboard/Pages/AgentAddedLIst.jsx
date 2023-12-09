@@ -19,7 +19,7 @@ const AgentAddedList = () => {
     try {
       // Exclude _id from updatedData
       const { _id , ...dataWithoutId } = updatedData;
-      await axios.put(`http://localhost:5000/houseUpdate/${_id}`, dataWithoutId);
+      await axios.put(`https://real-state-server-side.vercel.app/houseUpdate/${_id}`, dataWithoutId);
       toast.success('Property updated successfully');
       setUpdateModalOpen(false);
       refetch();
@@ -35,7 +35,7 @@ const AgentAddedList = () => {
 
   const handleDeleteClick = async (propertyId) => {
     try {
-      await axios.delete(`http://localhost:5000/houseDelete/${propertyId}`);
+      await axios.delete(`https://real-state-server-side.vercel.app/houseDelete/${propertyId}`);
       toast.success('Property deleted successfully');
       refetch();
     } catch (error) {

@@ -38,7 +38,7 @@ console.log("all",data)
 
     try {
       // Perform the PUT request when an offer is accepted
-      await axios.put(`http://localhost:5000/offers/accept/${id}`, { status: 'accepted' });
+      await axios.put(`https://real-state-server-side.vercel.app/offers/accept/${id}`, { status: 'accepted' });
     } catch (error) {
       console.error('Error accepting offer:', error);
     }
@@ -60,7 +60,7 @@ console.log("all",data)
 
     try {
       // Perform the PUT request when an offer is rejected
-      await axios.put(`http://localhost:5000/offers/reject/${id}`, { status: 'rejected' });
+      await axios.put(`https://real-state-server-side.vercel.app/offers/reject/${id}`, { status: 'rejected' });
     } catch (error) {
       console.error('Error rejecting offer:', error);
     }

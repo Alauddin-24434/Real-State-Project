@@ -14,7 +14,7 @@ const ManageBookings = () => {
 
   const handleRoleUpdate = async (id, newStatus) => {
     try {
-      const response = await axios.patch(`http://localhost:5000/houses/update/${id}`, {
+      const response = await axios.patch(`https://real-state-server-side.vercel.app/houses/update/${id}`, {
         status: newStatus,
       });
       console.log(`Booking status updated to ${newStatus}:`, response.data);

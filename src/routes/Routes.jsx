@@ -48,7 +48,7 @@ export const router = createBrowserRouter([
       {
         path: '/property/:id',
         element: <PrivateRoute><PropertyDetails /></PrivateRoute>,
-        loader: ({ params }) => fetch(`http://localhost:5000/houses/${[params.id]}`)
+        loader: ({ params }) => fetch(`https://real-state-server-side.vercel.app/houses/${[params.id]}`)
 
       }
     ],

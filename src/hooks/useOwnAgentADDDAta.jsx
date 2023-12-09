@@ -7,7 +7,7 @@ const useOwnAgentADData = () => {
     const {data,isLoading, isFetching,error,refetch}=useQuery({
         queryKey:['agentHouses'],
         queryFn: async ()=>{
-            const data= await fetch(`http://localhost:5000/agentHouses/${user?.email}`)
+            const data= await fetch(`https://real-state-server-side.vercel.app/agentHouses/${user?.email}`)
             return await data.json()
         }
        })

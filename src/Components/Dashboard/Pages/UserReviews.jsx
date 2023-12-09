@@ -19,7 +19,7 @@ const OwnUserReviews = () => {
     // handle book delete
     const handleBookDelete = async (id) => {
         try {
-            const response = await axios.delete(`http://localhost:5000/userReviews/${id}`);
+            const response = await axios.delete(`https://real-state-server-side.vercel.app/userReviews/${id}`);
             // Assuming a successful deletion, you might want to update your state or UI
             // based on the response from the server.
             console.log('Booking deleted successfully:', response.data);

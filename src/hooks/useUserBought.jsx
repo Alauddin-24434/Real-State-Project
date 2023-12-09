@@ -14,7 +14,7 @@ const useUserBought = () => {
         return null;
       }
 
-      const response = await fetch(`http://localhost:5000/userBought?email=${user.email}`);
+      const response = await fetch(`https://real-state-server-side.vercel.app/userBought?email=${user.email}`);
       return await response.json();
     },
   });

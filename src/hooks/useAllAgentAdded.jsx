@@ -5,7 +5,7 @@ const useAllAgentAdded = () => {
     const {data, isFetching,error,refetch}=useQuery({
         queryKey:['houses'],
         queryFn: async ()=>{
-            const data= await fetch('http://localhost:5000/houses')
+            const data= await fetch('https://real-state-server-side.vercel.app/houses')
             return await data.json()
         }
        })

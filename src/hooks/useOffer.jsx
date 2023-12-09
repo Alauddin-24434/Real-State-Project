@@ -5,7 +5,7 @@ const useOffers = () => {
     const {data, isFetching,error,refetch}=useQuery({
         queryKey:['offers'],
         queryFn: async ()=>{
-            const data= await fetch('http://localhost:5000/offers')
+            const data= await fetch('https://real-state-server-side.vercel.app/offers')
             return await data.json()
         }
        })

@@ -5,7 +5,7 @@ const useAllReviews = () => {
     const {data, isFetching,error,refetch}=useQuery({
         queryKey:['reviews'],
         queryFn: async ()=>{
-            const data= await fetch('http://localhost:5000/reviews')
+            const data= await fetch('https://real-state-server-side.vercel.app/reviews')
             return await data.json()
         }
        })

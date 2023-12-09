@@ -15,7 +15,7 @@ const MyBookings = () => {
 
   const handleBookDelete = async (id) => {
     try {
-      const response = await axios.delete(`http://localhost:5000/carts/${id}`);
+      const response = await axios.delete(`https://real-state-server-side.vercel.app/carts/${id}`);
       console.log('Booking deleted successfully:', response.data);
       toast.success('Booking deleted successfully');
       refetch();

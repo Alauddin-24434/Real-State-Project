@@ -38,7 +38,7 @@ const navigate=useNavigate()
             };
 
             // Send the offer to the server
-            const response = await axios.post('http://localhost:5000/offers', offerData);
+            const response = await axios.post('https://real-state-server-side.vercel.app/offers', offerData);
             console.log('Offer submitted successfully:', response.data);
             toast.success('Offer submitted successfully');
            

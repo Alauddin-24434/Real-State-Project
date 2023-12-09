@@ -42,7 +42,7 @@ const PropertyDetails = () => {
         event.preventDefault();
 
         try {
-            const response = await axios.post('http://localhost:5000/reviews', {
+            const response = await axios.post('https://real-state-server-side.vercel.app/reviews', {
                 reviewText: reviewText,
 
                 number: number,
@@ -87,7 +87,7 @@ const PropertyDetails = () => {
 
 
         try {
-            const response = await axios.post('http://localhost:5000/carts', {
+            const response = await axios.post('https://real-state-server-side.vercel.app/carts', {
                 email: user?.email,
                 guestName: user?.displayName,
                 title: title,

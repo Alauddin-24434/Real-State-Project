@@ -2,7 +2,7 @@
 
 import { Link } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
-
+import logo from '../../../assets/images/logo.png'
 
 import Container from "../Container";
 const Navbar = () => {
@@ -13,7 +13,7 @@ const Navbar = () => {
       <nav className="bg-gray-300 p-4 ">
         <div className="container mx-auto  md:flex md:justify-between items-center">
           <Link to="/" className="text-red-400 text-lg font-bold">
-            Real State
+           <img src={logo} className='w-12 h-12' alt="" />
           </Link>
 
           {/* small screen */}

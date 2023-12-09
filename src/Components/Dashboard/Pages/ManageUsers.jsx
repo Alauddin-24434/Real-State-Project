@@ -9,7 +9,7 @@ const ManageUsers = () => {
   // Handle user delete
   const handleUserDelete = async (id) => {
     try {
-      const response = await axios.delete(`http://localhost:5000/users/${id}`);
+      const response = await axios.delete(`https://real-state-server-side.vercel.app/users/${id}`);
       console.log('User deleted successfully:', response.data);
       toast.success('User deleted successfully');
       refetch();
@@ -22,7 +22,7 @@ const ManageUsers = () => {
   // Handle admin click
   const handleRoleUpdate = async (id, newRole) => {
     try {
-      const response = await axios.patch(`http://localhost:5000/users/${id}`, {
+      const response = await axios.patch(`https://real-state-server-side.vercel.app/users/${id}`, {
         role: newRole,
       });
       console.log(`User role updated to ${newRole}:`, response.data);

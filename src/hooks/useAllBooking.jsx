@@ -5,7 +5,7 @@ const useAllBooking = () => {
     const {data, isFetching,error,refetch}=useQuery({
         queryKey:['allBooking'],
         queryFn: async ()=>{
-            const data= await fetch('http://localhost:5000/allBooking')
+            const data= await fetch('https://real-state-server-side.vercel.app/allBooking')
             return await data.json()
         }
        })

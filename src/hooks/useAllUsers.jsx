@@ -5,7 +5,7 @@ const useAllUsers = () => {
     const {data, isFetching,error,refetch}=useQuery({
         queryKey:['users'],
         queryFn: async ()=>{
-            const data= await fetch('http://localhost:5000/users')
+            const data= await fetch('https://real-state-server-side.vercel.app/users')
             return await data.json()
         }
        })
