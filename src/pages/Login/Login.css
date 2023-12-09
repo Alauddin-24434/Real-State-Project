@@ -1,0 +1,23 @@
+@keyframes pulse {
+    0% {
+      box-shadow: 0 0 0 0px rgba(255, 255, 255, 0.7);
+    }
+    50% {
+      box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
+    }
+    100% {
+      box-shadow: 0 0 0 0px rgba(255, 255, 255, 0);
+    }
+  }
+  
+  .border-pulse {
+    animation: pulse 1.5s infinite;
+  }
+  
+  .login-form {
+    border: 2px solid #fff; /* Change the color as needed */
+    border-radius: 8px; /* Adjust the border-radius as needed */
+    padding: 20px; /* Adjust the padding as needed */
+    margin: 10px; /* Add margin to separate from the edges of the screen */
+  }
+  

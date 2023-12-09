@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.slick-slide > div {
+    margin: 0 10px;
+    
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+ /* PropertyDetails.css */
+
+.property-details-container {
+    background-color: green;
+  }
+  
+  .property-date-container {
+  
+    text-align: center;
+    margin: 20px;
+ 
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .custom-date-picker {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 8px;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #333;
+  }
+  
+  .wishlist-button {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .wishlist-button-disabled {
+    background-color: #f44336;
+    cursor: not-allowed;
+  }
+  
