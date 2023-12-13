@@ -11,3 +11,51 @@
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/svg+xml" href="/vite.svg">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vite + React</title>
+</head>
+<body>
+  <!-- Your React root element -->
+  <div id="root"></div>
+
+  <!-- Your React main script -->
+  <script type="module" src="/src/main.jsx"></script>
+
+  <!-- Messenger Chat Plugin Code -->
+  <div id="fb-root"></div>
+
+  <!-- Facebook Chat Plugin -->
+  <div id="fb-customer-chat" class="fb-customerchat"></div>
+
+  <!-- Set the page_id and attribution for the Chat Plugin -->
+  <script>
+    var chatbox = document.getElementById('fb-customer-chat');
+    chatbox.setAttribute("page_id", "109774391573014");
+    chatbox.setAttribute("attribution", "biz_inbox");
+  </script>
+
+  <!-- Facebook SDK initialization -->
+  <script>
+    window.fbAsyncInit = function() {
+      FB.init({
+        xfbml: true,
+        version: 'v18.0'
+      });
+    };
+
+    // Load the Facebook SDK asynchronously
+    (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+  </script>
+</body>
+</html>
